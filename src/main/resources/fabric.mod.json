@@ -10,7 +10,7 @@
 	"contact": {
 		"sources": "https://github.com/DeveloperPuffs/One-Item"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/one-item/icon.png",
 	"environment": "*",
 	"entrypoints": {
