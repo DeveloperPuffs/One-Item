@@ -12,14 +12,14 @@ import org.jspecify.annotations.Nullable;
 @Mixin(GuiGraphicsExtractor.class)
 public class GuiGraphicsExtractorMixin {
 	@Inject(method = "itemCount", at = @At("HEAD"), cancellable = true)
-	private void itemCount(final Font font, final ItemStack itemStack, final int x, final int y, final @Nullable String countText, CallbackInfo callbackInfo) {
-		GuiGraphicsExtractor graphicsExtractor = (GuiGraphicsExtractor)(Object)this;
+	private void itemCount(final Font font, final ItemStack itemStack, final int x, final int y, final @Nullable String countText, CallbackInfo callbackInformation) {
+		GuiGraphicsExtractor guiGraphicsExtractor = (GuiGraphicsExtractor)(Object)this;
 
 		// Only draw the item count (1) when there is no given custom count text and when the item is singular and stackable
 		if (countText == null && itemStack.getCount() == 1 && itemStack.isStackable()) {
 			String amount = String.valueOf(itemStack.getCount());
-			graphicsExtractor.text(font, amount, x + 19 - 2 - font.width(amount), y + 6 + 3, -1, true);
-			callbackInfo.cancel();
+			guiGraphicsExtractor.text(font, amount, x + 19 - 2 - font.width(amount), y + 6 + 3, -1, true);
+			callbackInformation.cancel();
 		}
 	}
 }
