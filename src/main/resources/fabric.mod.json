@@ -8,7 +8,8 @@
 		"PlasmaPuffs"
 	],
 	"contact": {
-		"sources": "https://github.com/DeveloperPuffs/One-Item"
+		"sources": "https://github.com/DeveloperPuffs/One-Item",
+		"issues": "https://github.com/DeveloperPuffs/One-Item/issues"
 	},
 	"license": "MIT",
 	"icon": "assets/one-item/icon.png",
